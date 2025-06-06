@@ -1,10 +1,11 @@
 import React from 'react';
 import fr from './fruit.module.css'
+import FruitOne from './FruitOne';
 
 function FruitList(props) {
 
     const arr = [
-        {title:'기스과 못난이 햇부사',  price:69900 },
+        {title:'못난이 햇부사',  price:69900 },
         {title:'털보네사과',  price:54900 },
         {title:'참외',  price:1000 },
         {title:'거짓외',  price:2000 },
@@ -30,11 +31,13 @@ function FruitList(props) {
         {title:'라인애플',  price: 22000}
 
     ]    
-
-    console.log(arr.length)
+    // for (const ee of arr) {
+    //     console.log(ee)    
+    // }
+    
     return (
         <div className={fr.wrapper}>
-            
+            {arr.map((vv, i)=><FruitOne fd={vv} no={i} key={i}/>)}
         </div>
     );
 }
