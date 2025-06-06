@@ -1,0 +1,39 @@
+.box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    margin: 1px;
+}
+h1{
+    text-align: center;
+}
+.wrapper > img{
+    width: 364px;
+}
+.wrapper{
+    width: 364px;
+    height: 750px;
+    border: 1px solid #ccc;
+    padding: 1px;
+}
+
+.sun{
+    color: #f00;
+}
+.sat{
+    color: #00f;
+}
+
+.wrapper > div> .box:nth-of-type(7n+1){
+    color: #f00;
+}
+.wrapper > div> .box:nth-of-type(7n){
+    color: #00f;
+}
+.now{
+    background-color: #ff0;
+}
