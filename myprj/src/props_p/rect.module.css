@@ -1,0 +1,7 @@
+.boxxx{
+    width: 100px;
+    height: 100px;
+    background-color: #0f0;
+    border: 1px solid #ccc;
+    line-height: 100px;
+}
