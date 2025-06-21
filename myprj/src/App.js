@@ -5,7 +5,10 @@
 // import Comp from "./basic/Comp";
 // import PropApp from "./props_p/PropApp";
 // import FruitList from "./props_p/FruitList";
-import Renders from "./state_p/Renders";
+//import Renders from "./state_p/Renders";
+//import Frm from "./form_p/Frm";
+import FrmVal from "./form_p/FrmVal";
+
 
 function App() {
   return (
@@ -26,8 +29,11 @@ function App() {
       <FruitList/>
 
       둘째날  
-    */}
+    
     <Renders name3="ccc" nn5="eee" />
+    <Frm/>
+      */}
+    <FrmVal/>
     </>
   );
 }
