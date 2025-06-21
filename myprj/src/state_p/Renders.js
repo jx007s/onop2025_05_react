@@ -1,8 +1,11 @@
-import React from 'react';
+import {useState} from 'react';
 
 let name1 = 'aaa'
 
 function Renders(props) {
+
+    const [name4, setName4] = useState("ddd")
+    //    변수명,  대입변수명(setter)     초기값
 
     let name2 = 'bbb'
 
@@ -33,7 +36,7 @@ function Renders(props) {
     return (
         <div>
            <h1>Renders 이지롱</h1> 
-           name : {name1} , {name2}  , {props.name3} 
+           name : {name1} , {name2}  , {props.name3} , {name4}
            <button onClick={changeName1}>name1변경</button>
            <button onClick={changeName2}>name2변경</button>
            <button onClick={changeName3}>name3변경</button>
