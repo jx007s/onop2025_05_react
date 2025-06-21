@@ -27,7 +27,7 @@ function App() {
 
       둘째날  
     */}
-    <Renders name3="ccc" />
+    <Renders name3="ccc" nn5="eee" />
     </>
   );
 }
