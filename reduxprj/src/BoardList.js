@@ -1,11 +1,9 @@
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 function BoardList(props) {
     const posts = useSelector(state => state.posts)
-    const dispatch = useDispatch()
-
-
+   
     return (
         <div>
             <h2>목록페이지</h2>

@@ -1,11 +1,11 @@
-import {useState, useParams} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useState} from 'react';
+import {useNavigate, useParams} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 
 
 function BoardModify(props) {
 
-    const {id} = useParams()  // http://localhost:3000/BoardDetail/1  : 1 가져오기
+    const {id} = useParams()  // http://localhost:3000/BoardBoardModify/1  : 1 가져오기
 
     const navigate = useNavigate()
 
@@ -27,22 +27,14 @@ function BoardModify(props) {
     
 
 
-    function delGo(){
-        console.log(`del 실행 ${pp.id}`)
-
-        // 리듀서에 항목 제거
-        dispatch({type:"DEL", deId:pp.id });
-
-        navigate("/")        
-    }
-
     function submitGo(e){
         e.preventDefault()
         
-        // 리듀서에 항목 추가
-        //dispatch({type:"ADD", nData:{ id:newId++, title:title, content:content } })
+        // 리듀서에 항목 수정
 
-        navigate('/')   //목록 페이지로 이동
+        dispatch({type:"MODIFY", nData:{ id:pp.id, title:title, content:content } });
+
+        navigate(`/BoardDetail/${pp.id}`)   //목록 페이지로 이동
     }
 
     return (

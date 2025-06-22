@@ -33,6 +33,14 @@ function MyReducer(state = myState, action) {
                 ...state, 
                 posts: state.posts.filter(pp => pp.id != parseInt(action.deId)  )}
 
+        case "MODIFY":  //posts 배열에서 action.deId 가 같지 않은 것만 posts 배열로 저장
+                        //posts 배열에서 action.deId 항목만 제거
+
+            console.log("MODIFY 진입", action.nData)
+            return {
+                ...state, 
+                posts: state.posts.map(pp => pp.id == action.nData.id ? action.nData : pp  )}
+
         default:
             return state   // 기본값은 myState 리턴
 
