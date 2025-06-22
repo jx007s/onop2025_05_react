@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 function BoardModify(props) {
 
-    const {id} = useParams()  // http://localhost:3000/BoardBoardModify/1  : 1 가져오기
+    const {id} = useParams()  // http://localhost:3000/BoardModify/1  : 1 가져오기
 
     const navigate = useNavigate()
 
@@ -23,10 +23,6 @@ function BoardModify(props) {
         return <></>
     }
 
-
-    
-
-
     function submitGo(e){
         e.preventDefault()
         
@@ -34,7 +30,7 @@ function BoardModify(props) {
 
         dispatch({type:"MODIFY", nData:{ id:pp.id, title:title, content:content } });
 
-        navigate(`/BoardDetail/${pp.id}`)   //목록 페이지로 이동
+        navigate(`/BoardDetail/${pp.id}`)   //상세 페이지로 이동
     }
 
     return (

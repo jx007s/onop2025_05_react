@@ -13,7 +13,7 @@ function BoardDetail(props) {
     //  posts 항목 중에 id가 1인 항목 가져오기
 
 
-    if(!pp){  //항목이 없으면 화면에 출력안함
+    if(!pp){  //항목이 없으면 화면에 출력안함 - 삭제 후 항목이 없어서 에러발생 가능하므로 필요하다
         
         return <></>
     }
